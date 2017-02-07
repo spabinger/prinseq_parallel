@@ -10,6 +10,15 @@ Basic functionality
 * Process each split FASTQ individually
 * Merge processed files
 
+Installation
+------------
+```
+git clone https://github.com/spabinger/prinseq_parallel.git
+cd prinseq_parallel
+./INSTALL
+```
+
+This will install prinseq_parallel, prinseq, and coreutils (used for splitting the input file(s))
 
 Usage
 -----

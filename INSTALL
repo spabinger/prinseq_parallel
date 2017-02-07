@@ -1,0 +1,17 @@
+## Installation script for prinseq_parallel
+
+## Download and install prinseq
+wget https://downloads.sourceforge.net/project/prinseq/standalone/prinseq-lite-0.20.4.tar.gz
+tar xvf prinseq-lite-0.20.4.tar.gz
+ln -s prinseq-lite-0.20.4/prinseq-lite.pl
+rm prinseq-lite-0.20.4.tar.gz
+
+## Download split program
+wget http://ftp.gnu.org/gnu/coreutils/coreutils-8.26.tar.xz
+tar xvf coreutils-8.26.tar.xz
+rm coreutils-8.26.tar.xz
+cd coreutils-8.26
+./configure
+make
+cd ..
+ln -s coreutils-8.26/src/split
