@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -e "\nStarting Prinseq parallel: github.com/spabinger"
+echo -e "\nStarting Prinseq parallel: github.com/spabinger/prinseq_parallel"
 echo "Prinseq commands: ${@}"
 
 ## Get directory of script
@@ -51,13 +51,13 @@ echo ""
 
 ## Create split output dir - split subfolder with input name
 SPLIT_OUTPUT_DIR_INPUT_1="${OUTPUT_DIR}/split_${BASENAME_INPUT_FILE_1%.fastq}/"
-rm -r ${SPLIT_OUTPUT_DIR_INPUT_1}
+rm -rf ${SPLIT_OUTPUT_DIR_INPUT_1}
 mkdir -p ${SPLIT_OUTPUT_DIR_INPUT_1}
 
 if [ $TYPE_OF_DATA == "PE" ]
 then
     SPLIT_OUTPUT_DIR_INPUT_2="${OUTPUT_DIR}/split_${BASENAME_INPUT_FILE_2%.fastq}/"
-    rm -r ${SPLIT_OUTPUT_DIR_INPUT_2}
+    rm -rf ${SPLIT_OUTPUT_DIR_INPUT_2}
     mkdir -p ${SPLIT_OUTPUT_DIR_INPUT_2}
 fi
 echo ""
